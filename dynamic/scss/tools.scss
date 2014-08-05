@@ -3,7 +3,8 @@
 // Global classes
 .f-left{ float:left; }
 .f-right{ float:right; }
-.center{ width:940px; margin:0 auto; }
+.center{ width:1240px; margin:0 auto; }
+.clear{ clear:both; }
 
 // Font weights
 $thin:100;
@@ -35,17 +36,6 @@ $black:700;
     }
 }
 
-// Clear floats
-@mixin clear(){
-    &:after { 
-        content: "."; 
-        visibility: hidden; 
-        display: block; 
-        height: 0; 
-        clear: both;
-    }
-}
-
 // Gradients
 @mixin linear-gradient($from, $to, $direction) {
     background: $to;
@@ -64,38 +54,5 @@ $black:700;
         background: -o-linear-gradient(left, $from 0%,$to 100%);
         background: -ms-linear-gradient(left, $from 0%,$to 100%);
         background: linear-gradient(to right, $from 0%,$to 100%);
-    }
-}
-
-// Breakpoints
-@mixin breakpoint($breakpoint) {
-    @if $breakpoint == desktop {
-        @media screen and (min-width: 940px) { @content; }
-    }
-    @if $breakpoint == small-tablet {
-        @media screen and (min-width: 640px) and (max-width: 960px) { @content; }
-        @media only screen 
-        and (min-device-width : 768px)
-        and (max-device-width : 1024px)
-        and (-webkit-min-device-pixel-ratio: 1){ 
-            @content;
-        }
-    }
-    @if $breakpoint == phone {
-        // This should target all phones, including iphones
-        @media screen and (max-width: 640px) { @content; }
-        @media only screen
-        and (max-device-width: 320px)
-        and (-webkit-min-device-pixel-ratio: 2) { @content; }
-    }
-    @if $breakpoint == iphone {
-        @media only screen
-        and (max-device-width: 320px)
-        and (-webkit-min-device-pixel-ratio: 2) { @content; }
-    }
-    @if $breakpoint == retina {
-        @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            @content;       
-        }
     }
 }

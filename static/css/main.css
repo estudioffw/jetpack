@@ -19,4 +19,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .f-right { float: right; }
 
-.center { width: 940px; margin: 0 auto; }
+.center { width: 1240px; margin: 0 auto; }
+
+.clear { clear: both; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

@@ -1,5 +1,6 @@
 @import "compass";
 @include global-reset;
 @import "tools.scss";
+*{ @include box-sizing(border-box); }
 
 body{  }
