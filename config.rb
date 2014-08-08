@@ -4,9 +4,9 @@ require 'compass/import-once/activate'
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "static/css"
-sass_dir = "dynamic/scss"
+sass_dir = "scss/"
 images_dir = "static/img"
-javascripts_dir = "dynamic/js"
+javascripts_dir = "js/"
 fonts_dir = "static/font"
 
 output_style = :compact
@@ -23,4 +23,4 @@ color_output = false
 # project again passing --syntax sass, or you can uncomment this:
 # preferred_syntax = :sass
 # and then run:
-# sass-convert -R --from scss --to sass dynamic/scss scss && rm -rf sass && mv scss sass
+# sass-convert -R --from scss --to sass scss scss && rm -rf sass && mv scss sass
