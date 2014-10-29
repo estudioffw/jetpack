@@ -69,3 +69,11 @@ $black:700;
         background: linear-gradient(to right, $from 0%,$to 100%);
     }
 }
+
+// COR NOS PLACEHOLDERS
+@mixin placeholder($color){
+    ::-webkit-input-placeholder { color:$color; }
+    :-moz-placeholder { color:$color; opacity:  1; }
+    ::-moz-placeholder{ color:$color; opacity:  1; }
+    :-ms-input-placeholder{ color:$color; }
+}
